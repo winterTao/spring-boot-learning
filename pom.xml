@@ -10,6 +10,8 @@
   <modules>
     <module>hello-world</module>
     <module>aop-example</module>
+    <module>data-jpa</module>
+    <module>scheduler-quartz</module>
   </modules>
 
   <properties>
