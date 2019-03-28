@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/quartz?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      comment-prefix: QRTZ_
+    properties:
+      org:
+        quartz:
+          jobStore:
+            misfireThreshold: 3
+          threadPool:
+            threadCount: 5
