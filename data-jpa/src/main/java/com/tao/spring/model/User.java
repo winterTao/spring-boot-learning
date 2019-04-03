@@ -1,17 +1,24 @@
 package com.tao.spring.model;
 
+import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.annotation.Transient;
 
 /**
  * @author DongTao
  * @since 2019-03-22
  */
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "user")
 public class User {
@@ -23,4 +30,20 @@ public class User {
     private String username;
 
     private String password;
+
+    @Transient
+    @ManyToOne
+    @JoinColumn(name = "room_id"
+            , foreignKey = @ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT)
+    )
+    private Room room;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
