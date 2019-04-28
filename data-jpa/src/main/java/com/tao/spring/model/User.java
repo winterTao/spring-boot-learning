@@ -1,8 +1,6 @@
 package com.tao.spring.model;
 
-import javax.persistence.ConstraintMode;
 import javax.persistence.Entity;
-import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,9 +31,7 @@ public class User {
 
     @Transient
     @ManyToOne
-    @JoinColumn(name = "room_id"
-            , foreignKey = @ForeignKey(name = "none", value = ConstraintMode.NO_CONSTRAINT)
-    )
+    @JoinColumn(name = "room_id")
     private Room room;
 
     @Override

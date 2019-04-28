@@ -10,7 +10,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.ForeignKey;
 
 /**
  * @author DongTao
@@ -25,10 +24,10 @@ public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String area;
 
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL, targetEntity = User.class)
-    @ForeignKey(name = "none")
     private List<User> userList;
 
     @Override
