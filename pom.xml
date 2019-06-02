@@ -12,6 +12,7 @@
     <module>aop-example</module>
     <module>data-jpa</module>
     <module>scheduler-quartz</module>
+    <module>permission-design</module>
   </modules>
 
   <properties>
