@@ -11,6 +11,7 @@ import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 /**
@@ -42,6 +43,10 @@ public class UserServiceImpl extends BaseService implements UserService {
 
     @Override
     public User saveUser(User user) {
+
+        // 密码加密
+        user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
+
         return userRepository.save(user);
     }
 
