@@ -1,7 +1,9 @@
 package com.tao.spring.model;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -29,4 +31,9 @@ public class Permission extends BaseModel {
      * 表示一个url pattern，即路径匹配规则
      */
     private String urlPattern;
+
+    private Integer parentId;
+
+    @Transient
+    private List<Role> roles;
 }
