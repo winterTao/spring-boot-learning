@@ -13,6 +13,7 @@
     <module>data-jpa</module>
     <module>scheduler-quartz</module>
     <module>permission-design</module>
+    <module>mail-example</module>
   </modules>
 
   <properties>

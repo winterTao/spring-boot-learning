@@ -1,0 +1,12 @@
+spring:
+  mail:
+    host: smtp.qq.com
+    username: xxxxxxxxxx
+    password: xxxxxxxxxx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
