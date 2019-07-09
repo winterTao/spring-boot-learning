@@ -44,6 +44,11 @@ public class UserServiceImpl extends BaseService implements UserService {
     @Override
     public User saveUser(User user) {
 
+        User userByUsername = userRepository.findUserByUsername(user.getUsername());
+        if (userByUsername != null) {
+            throw new UsernameNotFoundException("user is already existed");
+        }
+
         // 密码加密
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
 
