@@ -1,0 +1,12 @@
+test:
+  a: false
+  b: false
+  c: false
+
+company:
+  #  hbzq:
+  #    enabled: false
+  shzq:
+    enabled: true
+#  zszq:
+#    enabled: true

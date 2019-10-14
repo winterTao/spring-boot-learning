@@ -14,6 +14,8 @@
     <module>scheduler-quartz</module>
     <module>permission-design</module>
     <module>mail-example</module>
+    <module>dynamic-router</module>
+    <module>condition-annotations</module>
   </modules>
 
   <properties>
