@@ -16,6 +16,7 @@
     <module>mail-example</module>
     <module>dynamic-router</module>
     <module>condition-annotations</module>
+    <module>security-jwt</module>
   </modules>
 
   <properties>
