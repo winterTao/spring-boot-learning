@@ -17,6 +17,7 @@
     <module>dynamic-router</module>
     <module>condition-annotations</module>
     <module>security-jwt</module>
+    <module>spring-redis</module>
   </modules>
 
   <properties>
