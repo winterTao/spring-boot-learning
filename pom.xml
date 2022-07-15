@@ -18,6 +18,7 @@
     <module>condition-annotations</module>
     <module>security-jwt</module>
     <module>spring-redis</module>
+    <module>apollo-consumer</module>
   </modules>
 
   <properties>

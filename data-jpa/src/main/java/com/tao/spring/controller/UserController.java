@@ -1,5 +1,6 @@
 package com.tao.spring.controller;
 
+import com.alibaba.druid.stat.DruidStatManagerFacade;
 import com.tao.spring.model.Room;
 import com.tao.spring.model.User;
 import com.tao.spring.service.RoomService;
@@ -46,6 +47,12 @@ public class UserController {
             direction = Direction.DESC) Pageable pageable) {
 
         return userService.getUserPage(pageable);
+    }
+
+    @GetMapping("/stat")
+    public Object druidStat() {
+        // DruidStatManagerFacade#getDataSourceStatDataList 该方法可以获取所有数据源的监控数据
+        return DruidStatManagerFacade.getInstance().getDataSourceStatDataList();
     }
 
     /**
